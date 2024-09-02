@@ -16,6 +16,16 @@ where max(salary) > 10000
 group by department_id;
 
 /*
+Corringindo: Referenciar uma função de grupo na cláusula HAVING
+*/
+select department_id, max(salary) as "Salario Maximo"
+from employees
+where department_id is not null
+group by department_id
+HAVING max(salary) > 10000
+order by max(salary);
+
+/*
 Aninhando funções de grupo
 Funções de grupo pode ser aninhado apenas uma vez
 */
