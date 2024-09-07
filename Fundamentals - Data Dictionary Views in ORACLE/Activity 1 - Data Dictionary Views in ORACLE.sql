@@ -27,6 +27,29 @@ FROM   user_objects;
 SELECT *
 FROM   user_tables;
 
+-- Consultando a VIEW que traz informações de todas as colunas do banco de dados
+SELECT *
+FROM   USER_TAB_COLUMNS
+ORDER BY column_id;
+
+-- Consultando a VIEW que traz informações de todas as CONSTRAINTS do banco de dados
+SELECT *
+FROM   USER_CONSTRAINTS;
+
+-- Consultando a VIEW que traz informações de todas as colunas de uma CONSTRAINT
+SELECT *
+FROM   USER_CONS_COLUMNS
+ORDER BY position;
+
+-- Consultando a VIEW que traz informações de todas os INDICES do banco de dados
+SELECT *
+FROM   USER_INDEXES;
+
+-- Consultando a VIEW que traz informações de todas as colunas que compõe os INDICES do banco de dados
+SELECT *
+FROM   USER_IND_COLUMNS;
+
+
 -- Consultando a VIEW que traz todas as informações de todas as SEQUENCES do banco de dados
 SELECT *
 FROM   user_sequences;
